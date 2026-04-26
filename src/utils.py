@@ -11,7 +11,6 @@ from sklearn.metrics import r2_score
 
 def save_object(file_path, obj):
     try:
-        dir_path = os.path.dirname(file_path)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, "wb") as file_obj:
             dill.dump(obj, file_obj)
